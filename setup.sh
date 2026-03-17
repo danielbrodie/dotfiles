@@ -7,7 +7,7 @@
 # Does NOT install software -- see prerequisites below.
 #
 # PREREQUISITES:
-#   brew install fish starship tmux fzf zoxide
+#   brew bundle --file=Brewfile
 #
 # AFTER RUNNING:
 #   1. Add fish to allowed shells and set as default:
@@ -50,6 +50,7 @@ backup_and_copy() {
 echo "Deploying dotfiles..."
 echo ""
 
+backup_and_copy "$SCRIPT_DIR/git/.gitconfig"           "$HOME/.gitconfig"
 backup_and_copy "$SCRIPT_DIR/ghostty/config"          "$HOME/.config/ghostty/config"
 backup_and_copy "$SCRIPT_DIR/fish/config.fish"         "$HOME/.config/fish/config.fish"
 backup_and_copy "$SCRIPT_DIR/fish/functions/mkcd.fish" "$HOME/.config/fish/functions/mkcd.fish"
