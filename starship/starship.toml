@@ -1,0 +1,92 @@
+# Starship Prompt Configuration
+# Docs: https://starship.rs/config/
+
+add_newline = true
+command_timeout = 5000
+
+# ---------------------------------------------------------
+# Prompt characters
+# ---------------------------------------------------------
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+# ---------------------------------------------------------
+# Directory
+# ---------------------------------------------------------
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold cyan"
+
+# ---------------------------------------------------------
+# Git
+# ---------------------------------------------------------
+[git_branch]
+symbol = " "
+format = "on [$symbol$branch]($style) "
+style = "bold purple"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "bold red"
+
+# ---------------------------------------------------------
+# Command duration (show when > 2s)
+# ---------------------------------------------------------
+[cmd_duration]
+min_time = 2000
+format = "took [$duration]($style) "
+style = "bold yellow"
+
+# ---------------------------------------------------------
+# Languages: enable what you use, disable the rest
+# ---------------------------------------------------------
+[python]
+format = '[${symbol}(${version} )]($style)'
+symbol = " "
+
+[nodejs]
+disabled = true
+
+[rust]
+format = "[$symbol($version )]($style)"
+symbol = " "
+
+[docker_context]
+disabled = true
+
+[golang]
+disabled = true
+
+[java]
+disabled = true
+
+[ruby]
+disabled = true
+
+[php]
+disabled = true
+
+[swift]
+disabled = true
+
+[kotlin]
+disabled = true
+
+[lua]
+disabled = true
+
+# ---------------------------------------------------------
+# System context
+# ---------------------------------------------------------
+[username]
+show_always = false
+format = "[$user]($style) "
+
+[hostname]
+ssh_only = true
+format = "at [$hostname]($style) "
+
+[time]
+disabled = true
