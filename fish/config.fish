@@ -6,10 +6,12 @@
 set -gx EDITOR nvim
 set -gx COLORTERM truecolor
 set -gx LANG en_US.UTF-8
+set -gx CLAUDE_CODE_NO_FLICKER 1
 
 # PATH additions
 fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/.local/bin
+fish_add_path $HOME/go/bin
 
 # ---------------------------------------------------------
 # Prompt: Starship
@@ -49,10 +51,14 @@ set -g fish_greeting
 fzf --fish | source
 
 # ---------------------------------------------------------
-# Zoxide (use 'z' to jump to directories)
+# Zoxide integration (use 'z' to jump to directories)
 # ---------------------------------------------------------
 zoxide init fish | source
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :

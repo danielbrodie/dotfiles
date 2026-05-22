@@ -1,11 +1,7 @@
-# Ghostty Configuration
-# Docs: ghostty +show-config --default --docs
-
-# Font
+# Catppuccin Mocha (matched from kitty on buffybuntu)
 font-family = Fira Code
 font-size = 12
 
-# Catppuccin Mocha
 background = 1e1e2e
 foreground = cdd6f4
 selection-background = f5e0dc
@@ -29,17 +25,17 @@ palette = 13=#f5c2e7
 palette = 14=#94e2d5
 palette = 15=#a6adc8
 
-# Window
 background-opacity = 0.95
+background-blur = 40
 window-padding-x = 8
 window-padding-y = 8
 window-padding-balance = true
 macos-titlebar-style = tabs
 
-# Shell
+# Shell: launch fish directly
 command = /opt/homebrew/bin/fish -l
 
-# Unbind Ghostty splits (tmux handles these)
+# Since tmux handles splits, unbind Ghostty's default
 keybind = super+d=unbind
 
 # Scrollback
@@ -51,3 +47,4 @@ cursor-style-blink = false
 
 # Mouse
 mouse-hide-while-typing = true
+

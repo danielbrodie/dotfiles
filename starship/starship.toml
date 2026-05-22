@@ -1,7 +1,11 @@
-# Starship Prompt Configuration
+# Starship Configuration
+# Location: ~/.config/starship.toml
 # Docs: https://starship.rs/config/
 
+# Blank line between prompts for readability
 add_newline = true
+
+# Timeout for commands that detect versions, etc.
 command_timeout = 5000
 
 # ---------------------------------------------------------
@@ -40,7 +44,7 @@ format = "took [$duration]($style) "
 style = "bold yellow"
 
 # ---------------------------------------------------------
-# Languages: enable what you use, disable the rest
+# Languages / tools: enable what you use, disable the rest
 # ---------------------------------------------------------
 [python]
 format = '[${symbol}(${version} )]($style)'
@@ -87,6 +91,9 @@ format = "[$user]($style) "
 [hostname]
 ssh_only = true
 format = "at [$hostname]($style) "
+
+[gcloud]
+disabled = true
 
 [time]
 disabled = true
