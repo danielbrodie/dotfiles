@@ -9,7 +9,8 @@ set -gx LANG en_US.UTF-8
 set -gx CLAUDE_CODE_NO_FLICKER 1
 
 # PATH additions
-fish_add_path /opt/homebrew/bin
+# Homebrew (macOS) -- only add if present
+test -d /opt/homebrew/bin; and fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/go/bin
 
@@ -59,6 +60,5 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# Added by OrbStack: command-line tools and integration
-# This won't be added again if you remove it.
-source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+# OrbStack (macOS/Windows) -- only source if present
+test -f ~/.orbstack/shell/init2.fish; and source ~/.orbstack/shell/init2.fish
