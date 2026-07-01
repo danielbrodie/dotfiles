@@ -56,6 +56,8 @@ backup_and_copy "$SCRIPT_DIR/fish/config.fish"         "$HOME/.config/fish/confi
 backup_and_copy "$SCRIPT_DIR/fish/functions/mkcd.fish" "$HOME/.config/fish/functions/mkcd.fish"
 backup_and_copy "$SCRIPT_DIR/starship/starship.toml"   "$HOME/.config/starship.toml"
 backup_and_copy "$SCRIPT_DIR/tmux/tmux.conf"           "$HOME/.tmux.conf"
+backup_and_copy "$SCRIPT_DIR/tmux/thumbs-open.sh"      "$HOME/.config/tmux/thumbs-open.sh"
+chmod +x "$HOME/.config/tmux/thumbs-open.sh"
 
 echo ""
 echo "Done. See the top of this script for post-install steps."
