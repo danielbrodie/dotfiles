@@ -1,0 +1,9 @@
+# macOS-only Ghostty settings.
+# Deployed by setup.sh as ~/.config/ghostty/config.local and pulled in via the
+# `config-file = ?config.local` include in the shared config. Not deployed on Linux.
+
+macos-titlebar-style = tabs
+
+# Launch fish directly. GUI apps on macOS don't inherit the interactive shell's
+# PATH, so the absolute homebrew path is required here.
+command = /opt/homebrew/bin/fish -l

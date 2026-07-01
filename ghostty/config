@@ -30,10 +30,12 @@ background-blur = 40
 window-padding-x = 8
 window-padding-y = 8
 window-padding-balance = true
-macos-titlebar-style = tabs
 
-# Shell: launch fish directly
-command = /opt/homebrew/bin/fish -l
+# Shell: on Linux fish is the login shell, so Ghostty launches it automatically.
+# macOS-only settings (absolute homebrew fish path + titlebar style) live in an
+# optional overlay that setup.sh deploys as config.local on macOS. The leading ?
+# makes this include a no-op when the file is absent (e.g. on Linux).
+config-file = ?config.local
 
 # Since tmux handles splits, unbind Ghostty's default
 keybind = super+d=unbind

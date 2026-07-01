@@ -52,6 +52,9 @@ echo ""
 
 backup_and_copy "$SCRIPT_DIR/git/.gitconfig"           "$HOME/.gitconfig"
 backup_and_copy "$SCRIPT_DIR/ghostty/config"          "$HOME/.config/ghostty/config"
+if [[ "$(uname)" == Darwin ]]; then
+    backup_and_copy "$SCRIPT_DIR/ghostty/config.macos" "$HOME/.config/ghostty/config.local"
+fi
 backup_and_copy "$SCRIPT_DIR/fish/config.fish"         "$HOME/.config/fish/config.fish"
 backup_and_copy "$SCRIPT_DIR/fish/functions/mkcd.fish" "$HOME/.config/fish/functions/mkcd.fish"
 backup_and_copy "$SCRIPT_DIR/starship/starship.toml"   "$HOME/.config/starship.toml"
